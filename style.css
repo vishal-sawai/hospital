@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+/* navbar */
+
+nav {
+  overflow: hidden;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  text-align: right;
+  width: 100%;
+  padding: 5px 0px;
+  background-color: #0d6efd!important;
+}
+
+.m {
+  font-family: 'Montserrat', sans-serif;
+  display: inline;
+  padding: 5px 10px;
+  font-size: 35px;
+  text-decoration: none;
+  color: white;
+}
+
+.m:hover {
+  color: brown;
+}
+
+.icon {
+  height: 53px;
+  margin: 0px 0px -39px 41px;
+}
+
+.i {
+  text-align: left;
+}
+
+/* home */
+
+body {
+  background-size: cover;
+}
+
+#home {
+  width: 100%;
+  height: 770px;
+  background: url("img/bag.jpg")no-repeat center center/cover;
+}
+
+.hl {
+  margin-top: 60px;
+  font-family: 'Caveat', cursive;
+}
+
+.logo {
+  filter: drop-shadow(2px 4px 6px black);
+  height: 125px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.hospital-name {
+  display: flex;
+  margin-top: -131px;
+  margin-left: 186px;
+  font-size: 60px;
+  color: white;
+}
+
+.city {
+  margin-top: 0px;
+  margin-left: 186px;
+  font-size: 40px;
+  color: white;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  border-radius: 20px;
+  background-color: rgb(96, 23, 165);
+  width: 300px;
+  text-align: center;
+  margin: 30px 0px 0px 250px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgba(96, 23, 165, 0.654);
+}
+
+/* doctor section */
+
+.doctor-section {
+  background-color: rgb(63, 63, 80);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  display: flow-root;
+}
+
+.drr {
+  width: 100%;
+}
+
+.dro {
+  display: flex;
+  width: 350px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background-color: blue;
+}
+
+.dri {
+  width: 150px;
+  height: 150px;
+}
+
+.dra {
+  margin: auto;
+}
+
+.dr2, .dr3 {
+  display: inline;
+}
+
+.dm {
+  margin: 0px 145px;
+  display: flex;
+}
+
+.dha {
+  padding-top: 30px;
+}
+
+.takedr {
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  background-color: rgb(255, 0, 0);
+  width: 300px;
+  cursor: pointer;
+  padding: 5px 190px;
+  border-radius: 10px;
+  
+}
+.takedr:hover{
+  background-color: rgba(255, 0, 0, 0.81);
+}
+.jp{
+  margin-bottom: 90px;
+}
+
+/* address and contact */
+
+.contact {
+  width: 100%;
+  height: 174px;
+  background-color: rgb(54, 56, 57);
+  color: white;
+  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.add {
+  width: 22%;
+}
+
+.ad {
+  font-size: 28px;
+  padding: 15px 0px 0px 50px;
+  font-weight: bold;
+}
+
+.adp {
+  padding: 10px 0px 0px 50px;
+  font-size: 20px;
+}
+
+.social {
+  height: 138px;
+  margin: auto;
+}
+
+.s {
+  border-radius: 83px;
+  height: 83px;
+  padding: 34px;
+}
+
+.s:hover {
+  opacity: 50%;
+}
+
+.addc {
+  float: right;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  background-color: rgb(36, 24, 24);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Appoinments  */
+
+/* Form  */
+
+#f {
+  margin-top: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.at {
+  background-color: rgb(63, 63, 80);
+  color: white;
+}
+
+.aform {
+  font-size: 22px;
+  width: 600px;
+  margin: 4% 10%;
+  margin-bottom: 10%;
+}
+
+.alabel {
+  float: left;
+  margin: 0px 10px;
+}
+
+.ainput {
+  float: left;
+  font-size: 15px;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  width: 550px;
+  outline: none;
+}
+
+.sp {
+  color: darkblue;
+  font-size: 18px;
+  float: left;
+  margin-left: 20px;
+  margin-top: -7px;
+}
+
+.op {
+  float: left;
+  font-size: 15spx;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  width: 576px;
+}
+
+.slide {
+  float: left;
+  margin-left: 10px;
+}
+
+.slide1 {
+  display: none;
+}
+
+.slide2 {
+  display: none;
+}
+
+#radioi {
+  float: left;
+  margin: 21px 15px;
+}
+
+#gender-radio {
+  margin: 0px 15px;
+  margin-top: 5px;
+}
+
+.choice {
+  float: left;
+  padding: 9px 0px;
+}
+
+#rlabel {
+  float: left;
+}
+
+.fees {
+  float: left;
+}
+
+.n {
+  width: 250px;
+}
+
+.sbtn {
+  font-size: 20px;
+  background-color: rgb(6, 130, 179);
+  color: white;
+  cursor: pointer;
+  width: 576px;
+}
+
+.sbtn:hover {
+  background-color: rgb(241, 57, 81);
+}
+
+/*log in page */
+
+#doctorbody {
+  background-color: rgb(63, 63, 80);
+}
+
+.doctor {
+  display: flex;
+  margin: 15px 0px;
+  margin-bottom: 25px;
+  background-color: black;
+  width: 100%;
+}
+
+#doctor1, #doctor2, #doctor3 {
+  display: flex;
+  width: 307px;
+  margin: auto;
+  background-color: white;
+  border-radius: 50px;
+}
+
+#dr1img, #dr2img, #dr3img {
+  height: 100px;
+  width: 100px;
+}
+
+.di {
+  height: 100%;
+  width: 100%;
+}
+
+.drheading {
+  display: inline;
+}
+
+.drheading2 {
+  display: inline;
+}
+
+.dbtn {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(6, 130, 179);
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dbtn:hover {
+  background-color: rgb(241, 57, 81);
+}
+
+.ddata {
+  margin:auto;
+}
+
+.heading-h {
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 40px;
+  color: white;
+  margin-top: 1%;
+}
+
+#user_div {
+  margin-top: 108px;
+}
+
+/* doctor log in */
+
+.lheading {
+  font-size: 100px;
+  margin: 40px 0px 0px 0px;
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+}
+
+#lmail {
+  width: 350px;
+  height: 35px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  font-size: large;
+  padding: 5px 10px;
+  outline: none;
+}
+
+#lpassword {
+  width: 350px;
+  height: 35px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  font-size: large;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.login {
+  font-size: 20px;
+  margin-top: 100px;
+}
+
+#lbtn {
+  font-size: 25px;
+  border-radius: 20px;
+  background-color: #0d6efd!important;
+  width: 350px;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+  padding: 3px 5px;
+  cursor: pointer;
+  color: white;
+}
+
+#lbtn:hover {
+  background-color: rgb(241, 57, 81);
+  color: black;
+}
+
+/* table  */
+
+.table {
+  margin: auto;
+  padding: 10px 35px;
+  font-size: 20px;
+  color: white;
+  width: 100%;
+}
+
+th {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 20px;
+  background-color: black;
+}
+
+tr {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+
+/* after table */
+
+#d-section{
+  display: flex;
+  margin: 0px 90px;
+  justify-content: space-between;
+  align-items: center;
+}
+#delete-button,#prescription-button{
+ height: 60px;
+}
+#ind,#inpr{
+  width: 200px;
+  height: 30px;
+  outline: 0;
+  padding: 1px 5px;
+  margin-bottom: 10px;
+}
+#inp{
+  width: 200px;
+  height: 70px;
+  outline: none;
+  padding: 1px 5px;
+  margin-bottom: 10px;
+}
+#delbtn,#prebtn{
+  /* margin: 10px 0px; */
+  width: 100%;
+  height: 30px;
+  outline: 0;
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.d,.pre{
+  position: absolute;
+  padding: 20px;
+  background-color: rgba(184, 174, 174, 0.857);
+  display: none;
+}
+.pre{
+  right: 2.6%;
+}
+.itc{
+  margin: auto;
+  margin: 10px 50px;
+}
+.d{
+  left: 2.6%;
+}

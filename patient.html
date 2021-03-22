@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>STAFF LOGIN</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+
+    <!-- javascript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+
+</head>
+
+<body id="doctorbody">
+    <!-- navbar -->
+    <div class="navbar">
+        <nav>
+            <div class="i"><img class="icon" src="img/icon.png"></div>
+            <a class="m" href="index.html">Home</a>
+            <a class="m" href="index.html#doctor-section">Doctor</a>
+            <a class="m" href="patient.html">Login</a>
+        </nav>
+    </div>
+    <!-- log in -->
+    <center>
+        <div class="login" id="login_div">
+            <h1 class="lheading">Log In</h1><br>
+            <input type="email" placeholder="User mail" id="lmail"><br>
+            <input type="password" placeholder="Enter your password" id="lpassword"><br><br>
+            <button id="lbtn" onclick="login()">Log In</button>
+        </div>
+    </center>
+    <div id="user_div">
+        <center>
+            <h1 class="heading-h">ABC HOSPITAL STAFF</h1>
+        </center>
+        <div class="doctor" id="did">
+            <div id="doctor1">
+                <div id="dr1img">
+                    <img class="di" src="img/doctor 1.jpg">
+                </div>
+                <div class="ddata">
+                    <h2 class="drheading">Doctor 1</h2><br>
+                    <h3 class="drheading2">General Physician</h3><br><br>
+                    <a class="dbtn" onclick="d1()" id="dc1">View Patients</a>
+                </div>
+            </div>
+            <div id="doctor2">
+                <div id="dr2img">
+                    <img class="di" src="img/doctor 2.jpg">
+                </div>
+                <div class="ddata">
+                    <h2 class="drheading">Doctor 2</h2><br>
+                    <h3 class="drheading2">Eye Specialist</h3><br><br>
+                    <a class="dbtn" onclick="d2()" id="dc2">View Patients</a>
+                </div>
+            </div>
+            <div id="doctor3">
+                <div id="dr3img">
+                    <img class="di" src="img/doctor 3.jpg">
+                </div>
+                <div class="ddata">
+                    <h2 class="drheading">Doctor 3</h2><br>
+                    <h3 class="drheading2">Dentist</h3><br><br>
+                    <a class="dbtn" onclick="d3()" id="dc3">View Patients</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- table -->
+        <div id="t">
+            <table class="table" border="1px">
+                <thead>
+                    <th>sr.no</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Reg No</th>
+                    <th>Email</th>
+                    <th>AppointmentDate</th>
+                    <th>Patient</th>
+                    <th>symptoms</th>
+                    <th>Gender</th>
+                </thead>
+                <tbody id="table1">
+
+                </tbody>
+            </table>
+
+            <div id="d-section">
+                <div class="itc">
+                    <div class="justs">
+                        <div class="it">
+                            <img id="delete-button" src="img/delete-1727486_1280.png">
+                        </div>
+                        <div class="d">
+                            <input type="text" id="ind" placeholder="Enter Register Number"><br>
+                            <button id="delbtn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="itc">
+                    <div class="justd">
+                        <div class="it">
+                            <img id="prescription-button" src="img/drug-icon-2316244_1280.png">
+                        </div>
+                        <div class="pre">
+                            <input type="text" id="inpr" placeholder="Enter Register Number"><br>
+                            <textarea rows="6" id="inp" placeholder="Enter prescription"></textarea><br>
+                            <button id="prebtn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <center><button id="lbtn" onclick="LogOut()">LogOut</button></center>
+        </div>
+</body>
+
+</html>

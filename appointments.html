@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <title>Take Appointments</title>
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- responsive -->
+  <link rel="stylesheet" href="responsive.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="at">
+  <!-- navbar -->
+  <div class="navbar">
+    <nav>
+      <div class="i"><img class="icon" src="img/icon.png"></div>
+      <a class="m" href="index.html">Home</a>
+      <a class="m" href="index.html#doctor-section">Doctor</a>
+      <a class="m" href="patient.html">Login</a>
+    </nav>
+  </div>
+  <center>
+    <div id="f">
+      <form class="aform" id="vform">
+        <label class="alabel">Name</label><br>
+        <input class="n ainput" type="text" placeholder="First Name" id="fname" required />
+        <input class="n ainput" type="text" placeholder="Last Name" id="lname" required /><br><br>
+
+        <label class="alabel">Email</label><br>
+        <input class="ainput" type="email" placeholder="eg.abc@gmail.com" id="email" required /><br><br>
+
+        <label class="alabel">Phone No</label><br>
+        <input class="ainput" type="phone" id="phone" placeholder="eg.1234567890" maxlength="10" minlength="10"
+          required /><br><br>
+
+        <label class="alabel">Address</label><br>
+        <input class="ainput" type="address" placeholder="Address" id="address" required /><br><br>
+
+        <label class="alabel">Reg No</label><span class="sp"></span><br>
+        <input class="ainput" id="r-no" type="text" required placeholder="eg.123" /><br><br>
+
+        <label class="alabel">Symptoms</label><br>
+        <input class="ainput" type="text" placeholder="Symptoms" id="symptoms" required /><br><br>
+
+        <label class="alabel">Gender</label><br>
+        <div class="choice">
+          <input type="radio" name="gender" id="gender-radio" value="Male" required><span>Male</span>
+          <input type="radio" name="gender" id="gender-radio" value="Female" required><span>Female</span>
+        </div>
+        <br><br>
+
+        <label class="alabel">Appointment Date</label><br>
+        <input class="ainput" id="adate" type="date" required /><br><br>
+
+        <label class="alabel">Select Your Doctor</label><br>
+        <select class="op" id="dr">
+          <option value="Doctor 1">Doctor 1 - General Physician</option>
+          <option value="Doctor 2">Doctor 2 - Eye Specialist</option>
+          <option value="Doctor 3">Doctor 3 - Dentist</option>
+        </select><br><br>
+
+        <label class="alabel">Patient</label><br>
+        <select class="op" id="pt">
+          <option value="Selecte Patient" selected>Selecte Patient</option>
+          <option value="New Patient">New Patient</option>
+          <option value="Renewal Patient">Renewal Patient</option>
+        </select>
+        <br><br>
+        <div class="slide">
+          <div class="slide1">
+            <span class="fees">*Fees:300</span><br><br>
+            <label id="rlabel">
+              <input type="radio" name="payment" id="radioi" value="Master Card" required>
+              <img class="rimg" src="img/master-card.png" height="40px">
+            </label><br>
+            <label id="rlabel">
+              <input type="radio" name="payment" id="radioi" value="Google Pay" required>
+              <img class="rimg" src="img/googlepay.png" height="40px">
+            </label><br>
+            <label id="rlabel">
+              <input type="radio" name="payment" id="radioi" value="Phone Pe" required>
+              <img class="rimg" src="img/phonepe.svg" height="40px">
+            </label><br>
+            <label id="rlabel">
+              <input type="radio" name="payment" id="radioi" value="Paytm" required>
+              <img class="rimg" src="img/paytm.png" height="40px">
+            </label><br>
+          </div>
+          <div class="slide2">
+            <span class="fees">*Fees:200</span><br><br>
+            <label id="rlabel">
+              <input type="radio" id="radioi" name="payment" value="Master Card" required>
+              <img class="rimg" src="img/master-card.png" height="40px">
+            </label><br>
+            <label id="rlabel">
+              <input type="radio" id="radioi" name="payment" value="Google Pay" required>
+              <img class="rimg" src="img/googlepay.png" height="40px">
+            </label><br>
+            <label id="rlabel">
+              <input type="radio" id="radioi" name="payment" value="Phone Pe" required>
+              <img class="rimg" src="img/phonepe.svg" height="40px">
+            </label><br>
+            <label id="rlabel">
+              <input type="radio" id="radioi" name="payment" value="Paytm" required>
+              <img class="rimg" src="img/paytm.png" height="40px">
+            </label><br>
+          </div>
+
+        </div>
+        <input class="sbtn ainput" id="insert" type="submit" onclick="store()" value="Send Request">
+      </form>
+    </div>
+  </center>
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+
+  <!-- javascript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

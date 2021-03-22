@@ -1,0 +1,271 @@
+@media only screen and (max-width:1024px) {
+    /* navbar */
+    .m {
+        padding: 0px 10px;
+        font-size: 55px;
+    }
+    .icon {
+        height: 104px;
+        margin: -11px 0px -74px 43px;
+    }
+    .nav {
+        width: 122%
+    }
+    /* home */
+    #home {
+        height: 1444px;
+        background: url("img/bg3.jpg")no-repeat center center/cover;
+    }
+    .logo {
+        height: 343px;
+        margin-top: 285px;
+        margin-left: 5px;
+    }
+    .hospital-name {
+        margin-top: 16px;
+        margin-left: 186px;
+        font-size: 113px;
+        color: white;
+    }
+    .city {
+        margin-left: 186px;
+        font-size: 84px;
+        color: white;
+    }
+    .btn {
+        background-color: rgb(241, 57, 81);
+        font-size: 60px;
+        width: 550px;
+        margin: 14px 54px 0px 127px;
+        padding: 12px 79px;
+        border-radius: 64px;
+    }
+    /* doctor section */
+    .doctor-section {
+        display: flow-root;
+    }
+    .drr {
+        width: 100%;
+        font-size: 38px;
+    }
+    .dro {
+        display: flex;
+        width: 800px;
+    }
+    .dri {
+        width: 200px;
+        height: 200px;
+    }
+    .dr2, .dr3 {
+        display: inline;
+    }
+    .dm {
+        margin: 0px 45px;
+        display: block;
+    }
+    .dha {
+        padding-top: 30px;
+        font-size: 70px;
+    }
+    .takedr {
+        font-size: 50px;
+    }
+    .jp {
+        margin-bottom: 90px;
+    }
+
+    /* address and contact */
+    .contact {
+        height: 300px;
+    }
+    .add {
+        width: 22%;
+    }
+    .ad {
+        font-size: 40px;
+        padding: 47px 0px 7px 47px;
+    }
+    .adp {
+        padding: 20px 8px 0px 21px;
+        font-size: 19px;
+    }
+    footer {
+        font-size: 37px;
+        padding: 31px;
+    }
+    /* appointments */
+    /* form */
+    .aform {
+        font-size: 45px;
+        float: left;
+        margin: 100px 7%;
+        width: 842px;
+    }
+    option {
+        font-size: 10px;
+    }
+    .ainput {
+        font-size: 40px;
+        padding: 5px 10px;
+        margin: 10px 8px;
+        width: 800px;
+    }
+    .alabel {
+        font-size: 45px;
+    }
+    .sp {
+        font-size: 30px;
+    }
+    .op {
+        width: 800px;
+        font-size: 30px;
+    }
+    .sbtn {
+        font-size: 50px;
+        margin-left: 21px;
+    }
+    .rimg {
+        height: 60px;
+    }
+    #gender-radio {
+        width: 30px;
+        height: 30px;
+    }
+    #radioi {
+        width: 30px;
+        height: 30px;
+    }
+    /* doctor page */
+    .doctor {
+        display: block;
+    }
+    #doctor1, #doctor2, #doctor3 {
+        width: 719px;
+        margin: 40px 143px;
+        border-radius: 30px;
+    }
+    #dr1img, #dr2img, #dr3img {
+        height: 300px;
+        width: 300px;
+        border-radius: 30px;
+    }
+    .di {
+        border-radius: 30px;
+    }
+    .dbtn {
+        font-size: 40px;
+        padding: 20px 60px;
+        border-radius: 10px;
+    }
+    .drheading {
+        font-size: 50px;
+    }
+    .drheading2 {
+        font-size: 40px;
+    }
+    /* table */
+    tr {
+        font-size: 18px;
+    }
+}
+
+/* iphone x and galaxy fold for home page*/
+
+@media only screen and (max-width:1024px) {
+    #home {
+        height: 1757px;
+    }
+    .logo {
+        height: 447px;
+        margin-top: 355px;
+        margin-left: 28px;
+    }
+    .hospital-name {
+        margin-top: 2px;
+        margin-left: 169px;
+        font-size: 136px;
+    }
+    .city {
+        margin-left: 186px;
+        font-size: 106px;
+    }
+    .btn {
+        width: 602px;
+        margin: 35px 54px 0px 126px;
+        padding: 20px 102px;
+        border-radius: 39px;
+    }
+    .lheading {
+        font-size: 200px;
+    }
+    #lmail {
+        width: 600px;
+        height: 50px;
+        margin: 25px 0px;
+        border-radius: 13px;
+        font-size: 50px;
+    }
+    #lpassword {
+        width: 600px;
+        height: 50px;
+        margin: 25px 0px;
+        border-radius: 13px;
+        font-size: 50px;
+    }
+    .login {
+        margin-top: 500px;
+    }
+    #lbtn {
+        font-size: 70px;
+        border-radius: 60px;
+        background-color: #0d6efd!important;
+        width: 550px;
+        margin: 40px 0px 0px 0px;
+        padding: 5px 7px;
+    }
+
+    /* after table */
+
+  #delete-button,#prescription-button{
+   height: 100px;
+  }
+  #ind,#inpr{
+    font-size: 25px;
+    width: 300px;
+    height: 30px;
+    outline: 0;
+    padding: 1px 5px;
+    margin-bottom: 10px;
+  }
+  #inp{
+    font-size: 25px;
+    width: 300px;
+    outline: none;
+    padding: 1px 5px;
+    margin-bottom: 10px;
+  }
+  #delbtn,#prebtn{
+    /* margin: 10px 0px; */
+    width: 100%;
+    height: 30px;
+    outline: 0;
+    padding: 1px 5px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .d,.pre{
+    position: absolute;
+    padding: 20px;
+    background-color: rgba(184, 174, 174, 0.857);
+  }
+  .pre{
+    right: 2.6%;
+  }
+  .itc{
+    margin: auto;
+    margin: 10px 50px;
+  }
+  .d{
+    left: 2.6%;
+  }
+}
