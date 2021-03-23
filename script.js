@@ -246,7 +246,43 @@ function d1() {
         tbody.appendChild(trow);
 
     }
+
 }
+// function update() {
+
+//     pre = document.getElementById('inp').value;
+//     r = document.getElementById("inpr").value;
+
+//     db.collection("Doctor 1").doc(r).update(
+//         {
+//             prescription: pre
+
+//         })
+//         .then(() => {
+//             alert("Prescription");
+//         })
+//         .catch((error) => {
+//             console.error("Error writing document: ", error);
+//         });
+// }
+
+// function prec() {
+//     db.collection("Doctor 1").doc(r).where("Doctor", "==", "Doctor 1").get({
+//         update();
+//     });
+// }
+
+
+// db.collection("Doctor 1").doc(r).get(){
+//     // .then(function(doc){
+//     if (Doctor == "Doctor 1") {
+
+//     }
+//     else{
+//         alert("no");
+//     }
+// }
+// });
 
 //doctor 2
 
@@ -277,7 +313,7 @@ function d2() {
 
     function SelectAllData() {
         $("#t").load(window.location.href + " #t");
-        
+
         var vi = db.collection("Doctor 2");
 
         vi.get().then((snapshot) => {
