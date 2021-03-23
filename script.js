@@ -48,7 +48,7 @@ var d11 = "Doctor 1";
 var d22 = "Doctor 2";
 var d33 = "Doctor 3";
 
-var d = "";
+var dac = "";
 
 
 // Initialize Firebase
@@ -155,7 +155,7 @@ const LogOut = () => {
 // doctor 1
 function d1() {
 
-    d = "d1"
+    dac = "d1"
 
     $(document).ready(function () {
 
@@ -257,7 +257,7 @@ function d1() {
 
 function d2() {
 
-    d = "d2"; 
+    dac = "d2"; 
 
     $(document).ready(function () {
 
@@ -276,9 +276,11 @@ function d2() {
 
         $("#delete-button").click(function () {
             $(".d").slideToggle();
+            $(".pre").slideUp();
         });
         $("#prescription-button").click(function () {
             $(".pre").slideToggle();
+            $(".d").slideUp();
         });
     });
 
@@ -357,9 +359,9 @@ function d2() {
 
 function d3() {
 
-     d = "d3";
+     dac = "d3";
 
-    $(document).ready(function () {
+     $(document).ready(function () {
 
         $("#d-section").slideDown();
 
@@ -376,9 +378,11 @@ function d3() {
 
         $("#delete-button").click(function () {
             $(".d").slideToggle();
+            $(".pre").slideUp();
         });
         $("#prescription-button").click(function () {
             $(".pre").slideToggle();
+            $(".d").slideUp();
         });
     });
 
@@ -471,13 +475,13 @@ function update(a) {
 }
 
 function prec() {
-    if(d == "d1"){
+    if(dac == "d1"){
         update("Doctor 1");
     }
-    else if(d == "d2"){
+    else if(dac == "d2"){
         update("Doctor 2");
     }
-    else if(d == "d3"){
+    else if(dac == "d3"){
         update("Doctor 3");
     }
     
