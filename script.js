@@ -48,6 +48,9 @@ var d11 = "Doctor 1";
 var d22 = "Doctor 2";
 var d33 = "Doctor 3";
 
+var d = "";
+
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -152,6 +155,8 @@ const LogOut = () => {
 // doctor 1
 function d1() {
 
+    d = "d1"
+
     $(document).ready(function () {
 
         $("#d-section").slideDown();
@@ -248,45 +253,11 @@ function d1() {
     }
 
 }
-// function update() {
-
-//     pre = document.getElementById('inp').value;
-//     r = document.getElementById("inpr").value;
-
-//     db.collection("Doctor 1").doc(r).update(
-//         {
-//             prescription: pre
-
-//         })
-//         .then(() => {
-//             alert("Prescription");
-//         })
-//         .catch((error) => {
-//             console.error("Error writing document: ", error);
-//         });
-// }
-
-// function prec() {
-//     db.collection("Doctor 1").doc(r).where("Doctor", "==", "Doctor 1").get({
-//         update();
-//     });
-// }
-
-
-// db.collection("Doctor 1").doc(r).get(){
-//     // .then(function(doc){
-//     if (Doctor == "Doctor 1") {
-
-//     }
-//     else{
-//         alert("no");
-//     }
-// }
-// });
-
 //doctor 2
 
 function d2() {
+
+    d = "d2"; 
 
     $(document).ready(function () {
 
@@ -386,6 +357,8 @@ function d2() {
 
 function d3() {
 
+     d = "d3";
+
     $(document).ready(function () {
 
         $("#d-section").slideDown();
@@ -475,4 +448,37 @@ function d3() {
         tbody.appendChild(trow);
 
     }
+}
+
+
+
+function update(a) {
+
+    pre = document.getElementById('inp').value;
+    r = document.getElementById("inpr").value;
+
+    db.collection(a).doc(r).update(
+        {
+            prescription: pre
+
+        })
+        .then(() => {
+            alert("Prescription");
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+}
+
+function prec() {
+    if(d == "d1"){
+        update("Doctor 1");
+    }
+    else if(d == "d2"){
+        update("Doctor 2");
+    }
+    else if(d == "d3"){
+        update("Doctor 3");
+    }
+    
 }
