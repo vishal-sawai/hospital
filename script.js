@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    $(document).ready(function(){
+        $(window).unload(function(){
+          alert("Goodbye!");
+        });
+      });
+
     $(".slide2").hide();
     $(".slide1").hide();
 
