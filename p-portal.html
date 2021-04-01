@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Patient portal</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+     <!-- firebase -->
+     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+ 
+     <!-- javascript -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="script.js"></script>
+ 
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <div class="navbar">
+        <nav>
+            <div class="i"><img class="icon" src="img/icon.png"></div>
+            <a class="m" href="index.html">Home</a>
+            <a class="m" href="index.html#doctor-section">Doctor</a>
+            <a class="m" href="patient.html">Login</a>
+            <a class="m" href="p-portal.html">patient portal</a>
+        </nav>
+    </div>
+
+    <!-- section -->
+    <div class="portal">
+        <label class="portal-label">Reg No</label><span class="sp"></span><br>
+        <input class="portal-input" id="portal-no" type="text" required placeholder="eg.123" /><br><br>
+        <label class="portal-label">Select Your Doctor</label><br>
+        <select class="portal-op" id="portal-dr">
+            <option value="Doctor 1">Doctor 1 - General Physician</option>
+            <option value="Doctor 2">Doctor 2 - Eye Specialist</option>
+            <option value="Doctor 3">Doctor 3 - Dentist</option>
+        </select><br><br>
+        <button class="portal-btn" onclick="patientclick()" >Submit</button>
+        <br><br>
+    </div><br><hr><br>
+    <div class="desinfo">
+        <p id="h1r">
+
+        </p>
+        <p id="h2r">
+
+        </p>
+        <p id="patient-des">
+
+        </p>
+    </div>
+</body>
+
+</html>

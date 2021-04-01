@@ -515,3 +515,47 @@ tr {
 .d{
   left: 2.6%;
 }
+
+/* portal-section */
+
+.portal{
+  margin: auto;
+  margin-top: 100px;
+  font-family: 'Montserrat', sans-serif;
+  width: 425px;
+}
+.portal-label{
+  font-size: 30px;
+}
+.portal-input,.portal-op{
+  width: 401px;
+  height: 25px;
+  padding: 5px 10px;
+  outline: 0;
+  font-size: 20px;
+}
+.portal-op{
+  height: 40px;
+  width: 425px;
+}
+.portal-btn{
+  height: 40px;
+  width: 425px;
+  font-size: 30px;
+  outline: 0;
+  border-radius: 10px;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+}
+.portal-btn:hover{
+  background-color: rgba(0, 0, 139, 0.753);
+}
+
+.desinfo{
+  padding: 10px 20px;
+  font-size: 25px;
+}
+#h1r,#h2r,#patient-des{
+  margin: 3px 0px;
+}

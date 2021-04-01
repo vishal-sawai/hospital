@@ -2,7 +2,7 @@
     /* navbar */
     .m {
         padding: 0px 10px;
-        font-size: 55px;
+        font-size: 40px;
     }
     .icon {
         height: 104px;
@@ -267,5 +267,34 @@
   }
   .d{
     left: 2.6%;
+  }
+
+  /* portal-section */
+
+.portal{
+    margin-top: 300px;
+    width: 800px;
+  }
+  .portal-label{
+    font-size: 60px;
+  }
+  .portal-input,.portal-op{
+    width: 741px;
+    height: 76px;
+    font-size: 50px;
+  }
+  .portal-op{
+    height: 90px;
+    width: 779px;
+  }
+  .portal-btn{
+    height: 70px;
+    width: 788px;
+    font-size: 50px;
+    outline: 0;
+    border-radius: 14px;
+  }
+  .desinfo{
+    font-size: 47px;
   }
 }

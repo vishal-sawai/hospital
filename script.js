@@ -257,7 +257,7 @@ function d1() {
 
 function d2() {
 
-    dac = "d2"; 
+    dac = "d2";
 
     $(document).ready(function () {
 
@@ -359,9 +359,9 @@ function d2() {
 
 function d3() {
 
-     dac = "d3";
+    dac = "d3";
 
-     $(document).ready(function () {
+    $(document).ready(function () {
 
         $("#d-section").slideDown();
 
@@ -475,14 +475,58 @@ function update(a) {
 }
 
 function prec() {
-    if(dac == "d1"){
+    if (dac == "d1") {
         update("Doctor 1");
     }
-    else if(dac == "d2"){
+    else if (dac == "d2") {
         update("Doctor 2");
     }
-    else if(dac == "d3"){
+    else if (dac == "d3") {
         update("Doctor 3");
     }
-    
+
+}
+
+
+// p-portal
+
+function patientclick() {
+
+    preg = document.getElementById("portal-no").value;
+
+    h1r = document.getElementById("h1r");
+    h2r = document.getElementById("h2r");
+    patientdes = document.getElementById("patient-des");
+
+
+    doctor = document.getElementById('portal-dr').value;
+    if (doctor == "Doctor 1") {
+        getdata(d11);
+    }
+
+    if (doctor == "Doctor 2") {
+        getdata(d22);
+    }
+
+    if (doctor == "Doctor 3") {
+        getdata(d33);
+    }
+
+ function getdata(pdr){
+    db.collection(pdr).doc(preg).get()
+        .then(function (doc) {
+            if (doc.exists) {
+
+                h1r.innerHTML = "<strong>Registration No</strong>:- </strong>"+doc.data().RegNo;
+                h2r.innerHTML = "<strong>Name:- </strong>"+doc.data().PatientFirstName;
+                patientdes.innerHTML = "<strong>prescription:- </strong>"+doc.data().prescription;
+            }
+            else {
+                alert(preg + " document not exist");
+            }
+        })
+        .catch(function (error) {
+            console.log("error", error);
+        })
+    }
 }
