@@ -1,10 +1,13 @@
+
+// load function
+
+var loadi = document.getElementById("loading");
+function loadfun(){
+    loadi.style.display = 'none';
+}
+
 $(document).ready(function () {
 
-    $(document).ready(function(){
-        $(window).unload(function(){
-          alert("Goodbye!");
-        });
-      });
 
     $(".slide2").hide();
     $(".slide1").hide();
