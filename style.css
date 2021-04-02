@@ -10,7 +10,7 @@
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: #fff url('img/Double\ Ring-1s-222px.gif') no-repeat center;
+  background: #fff url('img/Double\ Ring-1s-222px.svg') no-repeat center;
   background-size: 150px 150px;
   z-index: 1;
 }
