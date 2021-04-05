@@ -2,8 +2,10 @@
 // load function
 
 var loadi = document.getElementById("loading");
-function loadfun(){
+var navmenu = document.getElementById("navmenu");
+function loadfun() {
     loadi.style.display = 'none';
+    navmenu.style.display = 'block';
 }
 
 $(document).ready(function () {
@@ -521,21 +523,21 @@ function patientclick() {
         getdata(d33);
     }
 
- function getdata(pdr){
-    db.collection(pdr).doc(preg).get()
-        .then(function (doc) {
-            if (doc.exists) {
+    function getdata(pdr) {
+        db.collection(pdr).doc(preg).get()
+            .then(function (doc) {
+                if (doc.exists) {
 
-                h1r.innerHTML = "<strong>Registration No</strong>:- </strong>"+doc.data().RegNo;
-                h2r.innerHTML = "<strong>Name:- </strong>"+doc.data().PatientFirstName;
-                patientdes.innerHTML = "<strong>prescription:- </strong>"+doc.data().prescription;
-            }
-            else {
-                alert(preg + " document not exist");
-            }
-        })
-        .catch(function (error) {
-            console.log("error", error);
-        })
+                    h1r.innerHTML = "<strong>Registration No</strong>:- </strong>" + doc.data().RegNo;
+                    h2r.innerHTML = "<strong>Name:- </strong>" + doc.data().PatientFirstName;
+                    patientdes.innerHTML = "<strong>prescription:- </strong>" + doc.data().prescription;
+                }
+                else {
+                    alert(preg + " document not exist");
+                }
+            })
+            .catch(function (error) {
+                console.log("error", error);
+            })
     }
 }
