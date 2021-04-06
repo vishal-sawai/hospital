@@ -163,11 +163,7 @@ const LogOut = () => {
 
 // table
 
-// doctor 1
-function d1() {
-
-    dac = "d1"
-
+function delandpre(delpr){
     $(document).ready(function () {
 
         $("#d-section").slideDown();
@@ -175,7 +171,7 @@ function d1() {
         $("#delbtn").click(function (ev) {
             event.preventDefault();
             var d = document.getElementById('ind').value;
-            db.collection("Doctor 1").doc(d).delete().then(() => {
+            db.collection(delpr).doc(d).delete().then(() => {
                 alert("Document successfully deleted!");
                 $("#t").load(window.location.href + " #t");
             }).catch((error) => {
@@ -192,38 +188,36 @@ function d1() {
             $(".d").slideUp();
         });
     });
+}
 
-    function SelectAllData() {
-        $("#t").load(window.location.href + " #t");
+// select data
+function SelectAllData(delpr) {
+    $("#t").load(window.location.href + " #t");
 
-        var vi = db.collection("Doctor 1");
+    var vi = db.collection(delpr);
 
-        vi.get().then((snapshot) => {
-            const patient = [];
-            snapshot.forEach((doc) => {
-                const data = doc.data();
-                patient.push(data);
-            });
-            patient.map((vishal) => {
-                var fname = vishal.PatientFirstName;
-                var lname = vishal.PatientLastName;
-                var regno = vishal.RegNo;
-                var mail = vishal.Email;
-                var appdate = vishal.AppointmentDate;
-                var patient = vishal.Patient;
-                var symptoms = vishal.Symptoms;
-                var gender = vishal.Gender;
-                AddItemsToTable(fname, lname, regno, mail, appdate, patient, symptoms, gender);
-
-            });
-        }).catch((error) => {
-            // An error happened.
-            alert("Error: " + error);
+    vi.get().then((snapshot) => {
+        const patient = [];
+        snapshot.forEach((doc) => {
+            const data = doc.data();
+            patient.push(data);
         });
+        patient.map((vishal) => {
+            var fname = vishal.PatientFirstName;
+            var lname = vishal.PatientLastName;
+            var regno = vishal.RegNo;
+            var mail = vishal.Email;
+            var appdate = vishal.AppointmentDate;
+            var patient = vishal.Patient;
+            var symptoms = vishal.Symptoms;
+            var gender = vishal.Gender;
+            AddItemsToTable(fname, lname, regno, mail, appdate, patient, symptoms, gender);
 
-    }
-    SelectAllData();
-
+        });
+    }).catch((error) => {
+        // An error happened.
+        alert("Error: " + error);
+    });
     var stdNo = 0;
 
     function AddItemsToTable(fname, lname, regno, mail, appdate, patient, symptoms, gender) {
@@ -264,106 +258,25 @@ function d1() {
     }
 
 }
+
+// doctor 1
+function d1() {
+
+    dac = "d1"
+
+    delandpre(d11);
+
+    SelectAllData(d11);
+}
 //doctor 2
 
 function d2() {
 
     dac = "d2";
+ 
+    delandpre(d22);
 
-    $(document).ready(function () {
-
-        $("#d-section").slideDown();
-
-        $("#delbtn").click(function (ev) {
-            event.preventDefault();
-            var d = document.getElementById('ind').value;
-            db.collection("Doctor 2").doc(d).delete().then(() => {
-                alert("Document successfully deleted!");
-                $("#t").load(window.location.href + " #t");
-            }).catch((error) => {
-                alert.error("Error removing document: ", error);
-            });
-        });
-
-        $("#delete-button").click(function () {
-            $(".d").slideToggle();
-            $(".pre").slideUp();
-        });
-        $("#prescription-button").click(function () {
-            $(".pre").slideToggle();
-            $(".d").slideUp();
-        });
-    });
-
-    function SelectAllData() {
-        $("#t").load(window.location.href + " #t");
-
-        var vi = db.collection("Doctor 2");
-
-        vi.get().then((snapshot) => {
-            const patient = [];
-            snapshot.forEach((doc) => {
-                const data = doc.data();
-                patient.push(data);
-            });
-            patient.map((vishal) => {
-                var fname = vishal.PatientFirstName;
-                var lname = vishal.PatientLastName;
-                var regno = vishal.RegNo;
-                var mail = vishal.Email;
-                var appdate = vishal.AppointmentDate;
-                var patient = vishal.Patient;
-                var symptoms = vishal.Symptoms;
-                var gender = vishal.Gender;
-                AddItemsToTable(fname, lname, regno, mail, appdate, patient, symptoms, gender);
-
-            });
-        }).catch((error) => {
-            // An error happened.
-            alert("Error: " + error);
-        });
-
-
-    }
-    SelectAllData();
-    var stdNo = 0;
-
-    function AddItemsToTable(fname, lname, regno, mail, appdate, patient, symptoms, gender) {
-
-        var tbody = document.getElementById("table1");
-        var trow = document.createElement("tr");
-        var td1 = document.createElement("td");
-        var td2 = document.createElement("td");
-        var td3 = document.createElement("td");
-        var td4 = document.createElement("td");
-        var td5 = document.createElement("td");
-        var td6 = document.createElement("td");
-        var td7 = document.createElement("td");
-        var td8 = document.createElement("td");
-        var td9 = document.createElement("td");
-
-        td1.innerHTML = ++stdNo;
-        td2.innerHTML = fname;
-        td3.innerHTML = lname;
-        td4.innerHTML = regno;
-        td5.innerHTML = mail;
-        td6.innerHTML = appdate;
-        td7.innerHTML = patient;
-        td8.innerHTML = symptoms;
-        td9.innerHTML = gender;
-
-        trow.appendChild(td1);
-        trow.appendChild(td2);
-        trow.appendChild(td3);
-        trow.appendChild(td4);
-        trow.appendChild(td5);
-        trow.appendChild(td6);
-        trow.appendChild(td7);
-        trow.appendChild(td8);
-        trow.appendChild(td9);
-        tbody.appendChild(trow);
-
-    }
+    SelectAllData(d22);
 }
 
 // doctor 3
@@ -372,100 +285,12 @@ function d3() {
 
     dac = "d3";
 
-    $(document).ready(function () {
+    delandpre(d33);
 
-        $("#d-section").slideDown();
-
-        $("#delbtn").click(function (ev) {
-            event.preventDefault();
-            var d = document.getElementById('ind').value;
-            db.collection("Doctor 3").doc(d).delete().then(() => {
-                alert("Document successfully deleted!");
-                $("#t").load(window.location.href + " #t");
-            }).catch((error) => {
-                alert.error("Error removing document: ", error);
-            });
-        });
-
-        $("#delete-button").click(function () {
-            $(".d").slideToggle();
-            $(".pre").slideUp();
-        });
-        $("#prescription-button").click(function () {
-            $(".pre").slideToggle();
-            $(".d").slideUp();
-        });
-    });
-
-    function SelectAllData() {
-        $("#t").load(window.location.href + " #t");
-        var vi = db.collection("Doctor 3");
-
-        vi.get().then((snapshot) => {
-            const patient = [];
-            snapshot.forEach((doc) => {
-                const data = doc.data();
-                patient.push(data);
-            });
-            patient.map((vishal) => {
-                var fname = vishal.PatientFirstName;
-                var lname = vishal.PatientLastName;
-                var regno = vishal.RegNo;
-                var mail = vishal.Email;
-                var appdate = vishal.AppointmentDate;
-                var patient = vishal.Patient;
-                var symptoms = vishal.Symptoms;
-                var gender = vishal.Gender;
-                AddItemsToTable(fname, lname, regno, mail, appdate, patient, symptoms, gender,);
-
-            });
-        }).catch((error) => {
-            // An error happened.
-            alert("Error: " + error);
-        });
-    }
-    SelectAllData();
-    var stdNo = 0;
-
-    function AddItemsToTable(fname, lname, regno, mail, appdate, patient, symptoms, gender) {
-
-        var tbody = document.getElementById("table1");
-        var trow = document.createElement("tr");
-        var td1 = document.createElement("td");
-        var td2 = document.createElement("td");
-        var td3 = document.createElement("td");
-        var td4 = document.createElement("td");
-        var td5 = document.createElement("td");
-        var td6 = document.createElement("td");
-        var td7 = document.createElement("td");
-        var td8 = document.createElement("td");
-        var td9 = document.createElement("td");
-
-        td1.innerHTML = ++stdNo;
-        td2.innerHTML = fname;
-        td3.innerHTML = lname;
-        td4.innerHTML = regno;
-        td5.innerHTML = mail;
-        td6.innerHTML = appdate;
-        td7.innerHTML = patient;
-        td8.innerHTML = symptoms;
-        td9.innerHTML = gender;
-
-        trow.appendChild(td1);
-        trow.appendChild(td2);
-        trow.appendChild(td3);
-        trow.appendChild(td4);
-        trow.appendChild(td5);
-        trow.appendChild(td6);
-        trow.appendChild(td7);
-        trow.appendChild(td8);
-        trow.appendChild(td9);
-        tbody.appendChild(trow);
-
-    }
+    SelectAllData(d33);
 }
 
-
+// prescription section
 
 function update(a) {
 
@@ -475,7 +300,6 @@ function update(a) {
     db.collection(a).doc(r).update(
         {
             prescription: pre
-
         })
         .then(() => {
             alert("Prescription");
