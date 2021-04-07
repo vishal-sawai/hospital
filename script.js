@@ -55,6 +55,7 @@ var firebaseConfig = {
     appId: "1:665852192642:web:ce5688f088d77c137b519b"
 };
 
+// variable
 var d11 = "Doctor 1";
 var d22 = "Doctor 2";
 var d33 = "Doctor 3";
@@ -292,6 +293,19 @@ function d3() {
 
 // prescription section
 
+function prec() {
+    if (dac == "d1") {
+        update("Doctor 1");
+    }
+    else if (dac == "d2") {
+        update("Doctor 2");
+    }
+    else if (dac == "d3") {
+        update("Doctor 3");
+    }
+
+}
+
 function update(a) {
 
     pre = document.getElementById('inp').value;
@@ -307,19 +321,6 @@ function update(a) {
         .catch((error) => {
             console.error("Error writing document: ", error);
         });
-}
-
-function prec() {
-    if (dac == "d1") {
-        update("Doctor 1");
-    }
-    else if (dac == "d2") {
-        update("Doctor 2");
-    }
-    else if (dac == "d3") {
-        update("Doctor 3");
-    }
-
 }
 
 
