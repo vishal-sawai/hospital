@@ -164,36 +164,44 @@ const LogOut = () => {
 
 // table
 
-function delandpre(delpr){
+function delandpre(delpr) {
     $(document).ready(function () {
 
-        $("#d-section").slideDown();
+        $("#d-section").slideDown(); 
 
         $("#delbtn").click(function (ev) {
-            event.preventDefault();
             var d = document.getElementById('ind').value;
             db.collection(delpr).doc(d).delete().then(() => {
                 alert("Document successfully deleted!");
-                $("#t").load(window.location.href + " #t");
+                $("#table1").load(window.location.href + " #table1");
             }).catch((error) => {
                 alert.error("Error removing document: ", error);
             });
         });
-
-        $("#delete-button").click(function () {
-            $(".d").slideToggle();
-            $(".pre").slideUp();
-        });
-        $("#prescription-button").click(function () {
-            $(".pre").slideToggle();
-            $(".d").slideUp();
-        });
     });
 }
+ 
+function pp1() {
+    var x = document.getElementById("ddd");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function pp2() {
+    var x = document.getElementById("ppp");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
 // select data
 function SelectAllData(delpr) {
-    $("#t").load(window.location.href + " #t");
+    // $("#t").load(window.location.href + " #t");
+    $("#table1").load(window.location.href + " #table1");
 
     var vi = db.collection(delpr);
 
@@ -261,6 +269,10 @@ function SelectAllData(delpr) {
 }
 
 // doctor 1
+function dist(){
+    var c = document.getElementById("t");   
+    c.style.display = "block";
+}
 function d1() {
 
     dac = "d1"
@@ -268,16 +280,20 @@ function d1() {
     delandpre(d11);
 
     SelectAllData(d11);
+   
+    dist();
 }
 //doctor 2
 
 function d2() {
 
     dac = "d2";
- 
+
     delandpre(d22);
 
     SelectAllData(d22);
+
+    dist();
 }
 
 // doctor 3
@@ -289,6 +305,8 @@ function d3() {
     delandpre(d33);
 
     SelectAllData(d33);
+
+    dist();
 }
 
 // prescription section
