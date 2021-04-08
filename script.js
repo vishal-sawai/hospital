@@ -164,43 +164,9 @@ const LogOut = () => {
 
 // table
 
-function delandpre(delpr) {
-    $(document).ready(function () {
-
-        $("#d-section").slideDown(); 
-
-        $("#delbtn").click(function (ev) {
-            var d = document.getElementById('ind').value;
-            db.collection(delpr).doc(d).delete().then(() => {
-                alert("Document successfully deleted!");
-                $("#table1").load(window.location.href + " #table1");
-            }).catch((error) => {
-                alert.error("Error removing document: ", error);
-            });
-        });
-    });
-}
- 
-function pp1() {
-    var x = document.getElementById("ddd");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-  function pp2() {
-    var x = document.getElementById("ppp");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
 
 // select data
 function SelectAllData(delpr) {
-    // $("#t").load(window.location.href + " #t");
     $("#table1").load(window.location.href + " #table1");
 
     var vi = db.collection(delpr);
@@ -267,7 +233,22 @@ function SelectAllData(delpr) {
     }
 
 }
-
+function pp1() {
+    var x = document.getElementById("ddd");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function pp2() {
+    var x = document.getElementById("ppp");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 // doctor 1
 function dist(){
     var c = document.getElementById("t");   
@@ -277,7 +258,7 @@ function d1() {
 
     dac = "d1"
 
-    delandpre(d11);
+    // delandpre(d11);
 
     SelectAllData(d11);
    
@@ -289,7 +270,7 @@ function d2() {
 
     dac = "d2";
 
-    delandpre(d22);
+    // delandpre(d22);
 
     SelectAllData(d22);
 
@@ -302,12 +283,45 @@ function d3() {
 
     dac = "d3";
 
-    delandpre(d33);
+    // delandpre(d33);
 
     SelectAllData(d33);
 
     dist();
 }
+
+// delete button
+
+function deldoc() {
+    if (dac == "d1") {
+        delandpre("Doctor 1");
+    }
+    else if (dac == "d2") {
+        delandpre("Doctor 2");
+    }
+    else if (dac == "d3") {
+        delandpre("Doctor 3");
+    }
+
+}
+
+function delandpre(delpr) {
+    $(document).ready(function () {
+
+        // $("#d-section").slideDown(); 
+
+        $("#delbtn").click(function (ev) {
+            var d = document.getElementById('ind').value;
+            db.collection(delpr).doc(d).delete().then(() => {
+                alert("Document successfully deleted!");
+                $("#table1").load(window.location.href + " #table1");
+            }).catch((error) => {
+                alert.error("Error removing document: ", error);
+            });
+        });
+    });
+}
+
 
 // prescription section
 
