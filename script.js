@@ -308,8 +308,6 @@ function deldoc() {
 function delandpre(delpr) {
     $(document).ready(function () {
 
-        // $("#d-section").slideDown(); 
-
         $("#delbtn").click(function (ev) {
             var d = document.getElementById('ind').value;
             db.collection(delpr).doc(d).delete().then(() => {
@@ -318,12 +316,18 @@ function delandpre(delpr) {
             }).catch((error) => {
                 alert.error("Error removing document: ", error);
             });
+            document.getElementById('ind').value='';
         });
     });
 }
 
 
 // prescription section
+function clear()
+{
+    document.getElementById('inpr').value='';
+    document.getElementById('inp').value='';
+}
 
 function prec() {
     if (dac == "d1") {
@@ -353,6 +357,7 @@ function update(a) {
         .catch((error) => {
             console.error("Error writing document: ", error);
         });
+        clear();
 }
 
 
@@ -386,7 +391,7 @@ function patientclick() {
                 if (doc.exists) {
 
                     h1r.innerHTML = "<strong>Registration No</strong>:- </strong>" + doc.data().RegNo;
-                    h2r.innerHTML = "<strong>Name:- </strong>" + doc.data().PatientFirstName;
+                    h2r.innerHTML = "<strong>Name:- </strong>" + doc.data().PatientFirstName + " "+ doc.data().PatientLastName;
                     patientdes.innerHTML = "<strong>prescription:- </strong>" + doc.data().prescription;
                 }
                 else {
